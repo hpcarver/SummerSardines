@@ -15,18 +15,15 @@ class Ball {
     
     x = random(600);
     y = random(600);
-    speed = random(10);
+    speed = 10;
   
   }
   
   void move() {
     x = x + speed;
     y = y + speed;
-    if (x > width || y > width) {
-      speed = -1 * random(10);
-    }
-    if (x < 0 || y < 0) {
-      speed = random(10);
+    if (x > width || y > width || x < 0 || y < 0 ) {
+      speed *= -1;
     }
   }
   
