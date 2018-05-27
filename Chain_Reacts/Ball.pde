@@ -2,33 +2,44 @@ class Ball {
   float r;
   float g;
   float b; 
-  
+
   float x;
   float y;
-  float speed;
-  
-  
+  float speedX;
+  float speedY;
+  int rad;
+  int type =-1;
+
+
   Ball() {
     r = random(255);
     g = random(255);
     b = random(255);
-    
+
     x = random(600);
     y = random(600);
-    speed = 10;
-  
+    speedX = random(10);
+    speedY = random(10);
+    rad = 30;
   }
-  
+
   void move() {
-    x = x + speed;
-    y = y + speed;
-    if (x > width || y > width || x < 0 || y < 0 ) {
-      speed *= -1;
+    x = x + speedX;
+    y = y + speedY;
+    if (x > width || x < 0 ) {
+      speedX *= -1;
+    }
+    if (y > width || y < 0 ) {
+      speedY *= -1;
     }
   }
-  
+
   void display() {
-    fill(r,g,b);
-    ellipse(x,y,30,30);
+    fill(r, g, b);
+    ellipse(x, y, rad, rad);
+  }
+  void die() {
+    speedX = 0;
+    speedY = 0;
   }
 }

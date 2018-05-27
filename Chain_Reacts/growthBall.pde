@@ -1,0 +1,3 @@
+class growthBall extends Ball {
+  
+}
