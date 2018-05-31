@@ -50,3 +50,9 @@ Selina :: Created proposal doc
 Henry :: Created devlog
 Cheryl :: Created UML
 ==============================================================
+
+2018-05-31
+--------------------------------------------------------------
+Selina :: Created flowchart
+Team :: Began actual coding discussion & began coding the basics
+==============================================================
