@@ -1,0 +1,17 @@
+SummerSardines (Henry Carver, Cheryl Qian, Selina Zou)
+Plan 2018-05-30
+
+Which jobs are most crucial?
+      Because we are recreating Tetris, the display is crucial to the success of the project, so making the display sensible and effective is very important. Another important job will be making sure the code is clear and as easy to debug as possible. As with any project, lots of debugging will be necessary in the long run.
+
+Which components constitute core functionality (vs non-essential)?
+      We know that we must have a displayed shape for the player to place on the board, as well as see the piece that they will use next. These are just important parts of the real game. We also must have a functioning board - the rows must disappear if they are full, score is secondary but still important, and a leaderboard is even less essential. Another crucial component is the ability of the player to interact with the game using keys on the keyboard.
+
+Which components are prerequisites for others?
+      In order to fill a row on the board, the player must be able to place a shape into an empty space. In order to place a shape, the shape must be distinguished so the player can use it sensibly. In order to have a functional Player vs AI game, both sides must be able to work separately.
+
+Which tasks can be delegated, and which must be collaboratively tackled?
+      Tasks that can be delegated are ones regarding display and accessing the LinkedList. Tasks that must be collaboratively tackled are the early tasks that involve thinking ore critically about how to execute tasks, rather than setting off to code on our own.
+
+What is the timeline, and how does it accommodate setbacks, course changes?
+     Hopefully the timeline is short, but not too dense. With many days off from school, we will have some extra home time to perfect the project, so setbacks and course changes will have time to be dealt with.

@@ -48,5 +48,5 @@ LESSONS LEARNED
 --------------------------------------------------------------
 Selina :: Created proposal doc
 Henry :: Created devlog
-<Member> :: <Thing member did.>
+Cheryl :: Created UML
 ==============================================================
