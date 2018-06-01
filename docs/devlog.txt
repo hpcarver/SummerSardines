@@ -56,3 +56,10 @@ Cheryl :: Created UML
 Selina :: Created flowchart
 Team :: Began actual coding discussion & began coding the basics
 ==============================================================
+
+2018-06-01
+--------------------------------------------------------------
+Selina :: Worked on display code in driver class Tetris
+Cheryl :: Started making class TetrisPiece
+Henry :: Made empty Player class
+==============================================================
