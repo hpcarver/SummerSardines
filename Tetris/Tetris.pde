@@ -45,3 +45,22 @@ boolean onRect() {
   else 
   return false;
 }
+
+//TetrisPiece a = new TetrisPiece(1,100,100);
+//TetrisPiece b = new TetrisPiece(2,100,100);
+//TetrisPiece c = new TetrisPiece(3,100,100);
+//TetrisPiece d = new TetrisPiece(4,100,100);
+//TetrisPiece e = new TetrisPiece(5,100,100);
+//TetrisPiece f = new TetrisPiece(6,100,100);
+//TetrisPiece g = new TetrisPiece(7,100,100);
+
+//void setup() {
+// size(1500,900);
+// frameRate(30);
+// background(252);
+//}
+
+//void draw() {
+//  clear();
+//  a.display();
+//}
