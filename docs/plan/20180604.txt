@@ -1,0 +1,17 @@
+SummerSardines (Henry Carver, Cheryl Qian, Selina Zou)
+Plan 2018-06-04
+
+Which jobs are most crucial?
+      Because we are recreating Tetris, the display is crucial to the success of the project, so making the display sensible and effective is very important. Another important job will be making sure the code is clear and as easy to debug as possible. As with any project, lots of debugging will be necessary in the long run.
+
+Which components constitute core functionality (vs non-essential)?
+      We know that we must have a displayed shape for the player to place on the board, as well as see the piece that they will use next. These are just important parts of the real game. We also must have a functioning board - the rows must disappear if they are full, score is secondary but still important, and a leaderboard is even less essential. Another crucial component is the ability of the player to interact with the game using keys on the keyboard.
+
+Which components are prerequisites for others?
+      In order to fill a row on the board, the player must be able to place a shape into an empty space. In order to place a shape, the shape must be distinguished so the player can use it sensibly. In order to have a functional Player vs AI game, both sides must be able to work separately.
+
+Which tasks can be delegated, and which must be collaboratively tackled?
+      As seen now this far into the process, most tasks can be delegated, however, making sure they all work together in the same driver is difficult, so although the tasks themselves can be done individually, making different parts of code work together must be done collaboratively since everyone codes differently.
+
+What is the timeline, and how does it accommodate setbacks, course changes?
+     Due to finals picking up pace and the due date on Friday, we don't have room for setbacks, so every day will have to have a good deal of work done on the project, esepecially Tuesday and Thursday when there is no school and therefore extra time to work.
