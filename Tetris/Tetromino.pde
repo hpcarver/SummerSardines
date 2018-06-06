@@ -1,66 +1,41 @@
-public class TetrisPiece {
-  int type;
+class Tetromino {
+  int[][][] grid;
   int x;
   int y;
-  PShape p,a,b;
+  int type;
+  int rot;
+  PShape tetro;
   
-  public TetrisPiece(int newType, int newX, int newY) { //coors of top left corner
-      type = newType;
-      x = newX;
-      y = newY;
+  Tetromino(int newType, int newRot, int newX, int newY) {
+    type = newType;
+    rot = newRot;
+    x = newX;
+    y = newY;
+    grid = new int[][][] {  { {1,2,3,6},{2,5,6,10},{2,5,6,7},{1,5,6,9} },
+                            { {1,2,3,5},{1,2,6,10},{3,5,6,7},{1,5,9,10} },
+                            { {1,2,3,7},{2,6,9,10},{1,5,6,7},{1,2,5,9} },
+                            { {2,3,5,6},{1,5,6,10},{2,3,5,6},{1,5,6,10} },
+                            { {1,2,6,7},{2,5,6,9},{1,2,6,7},{2,5,6,9} },
+                            { {1,2,3,4},{2,6,10,14},{1,2,3,4},{2,6,10,14} },
+                            { {1,2,5,6},{1,2,5,6},{1,2,5,6},{1,2,5,6} },
+                         };
+    
   }
   
   void display() {
-      p = createShape(GROUP);
-      if ( type == 1 ) {
-        fill(100,20,0);
-         p = createShape(RECT, x, y, 100, 25);
-      }
-      if ( type == 2 ) {
-         fill(252,0,0);
-         p = createShape(RECT, x, y, 50, 50);
-      }
-      if ( type == 3 ) {
-         fill(252,252,0);
-         a = createShape(RECT, x, y, 75, 25);
-         b = createShape(RECT, x+25, y+25, 25, 25);
-         p.addChild(a);
-         p.addChild(b);
-      }
-      if ( type == 4 ) {
-         fill(252,0,252);
-         a = createShape(RECT, x, y, 75, 25);
-         b = createShape(RECT, x, y+25, 25, 25);
-         p.addChild(a);
-         p.addChild(b);
-      }
-      if ( type == 5 ) {
-         fill(252,252,0);
-         a = createShape(RECT, x, y, 75, 25);
-         b = createShape(RECT, x+50, y+25, 25, 25);
-         p.addChild(a);
-         p.addChild(b);
-      }
-      if ( type == 6 ) {
-         fill(252,10,0);
-         a = createShape(RECT, x, y, 50, 25);
-         b = createShape(RECT, x+25, y+25, 50, 25);
-         p.addChild(a);
-         p.addChild(b);
-      }
-      if ( type == 7 ) {
-         fill(252,252,0);
-         a = createShape(RECT, x, y, 50, 25);
-         b = createShape(RECT, x-25, y+25, 50, 25);
-         p.addChild(a);
-         p.addChild(b);
-      }
-      
-      shape(p);
+    tetro = createShape(GROUP);
+    for(int i = 0; i < grid.length; i++ ) {
+         for ( int j = 0; j < grid[0].length; j++ ) {
+             if ( i == type && j == rot ) {
+                for ( int k : grid[i][j] ) {
+                  Minomino m = new Minomino(x + ((k-1)%4) * 25, y + ((k/4) * 25));//1256
+                  tetro.addChild(m.getM());
+                }
+                break;
+             }
+         }
+    }
+    tetro.setFill(color(252));
+    shape(tetro);
   }
-  
-  void rotateP() {
-     p.rotate(0.01); 
-  }
-  
 }

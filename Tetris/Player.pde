@@ -1,16 +1,16 @@
-//java.util.import LinkedList
-//LinkedList allPieces;
-int level
-int score
+//import java.util.LinkedList;
+////LinkedList allPieces;
+//int level
+//int score
 
-void setup() {
-}
+//void setup() {
+//}
 
-void draw() {
-}
+//void draw() {
+//}
 
-void clear(int lines) {
-}
+//void clear(int lines) {
+//}
 
 //TetrisPiece peek() {
 //}
