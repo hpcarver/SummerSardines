@@ -45,9 +45,9 @@
 //  else 
 //  return false;
 //}
-Tetromino t = new Tetromino(0,1,100,100);
+Tetromino t = new Tetromino(2,1,100,100);
 void setup() {
-  size(1500, 900);
+  size(450, 700);
   background(0);
 }
 
