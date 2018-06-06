@@ -4,6 +4,7 @@ class Tetromino {
   int y;
   int type;
   int rot;
+  int speed;
   PShape tetro;
   
   Tetromino(int newType, int newRot, int newX, int newY) {
@@ -11,6 +12,7 @@ class Tetromino {
     rot = newRot;
     x = newX;
     y = newY;
+    speed = 25;
     grid = new int[][][] {  { {1,2,3,6},{2,5,6,10},{2,5,6,7},{1,5,6,9} },
                             { {1,2,3,5},{1,2,6,10},{3,5,6,7},{1,5,9,10} },
                             { {1,2,3,7},{2,6,9,10},{1,5,6,7},{1,2,5,9} },
@@ -35,7 +37,29 @@ class Tetromino {
              }
          }
     }
-    tetro.setFill(color(252));
     shape(tetro);
   }
+  
+  void rotate() {
+     if ( rot == 3 ) {
+        rot = 0; 
+     }
+     else {
+        rot++;
+     }
+  }
+  
+  void drop() {
+    y++;
+  }
+  
+  void moveLeft() {
+    x-=speed;
+  }
+  
+  void moveRight() {
+    x+=speed;
+  }
+  
+  
 }

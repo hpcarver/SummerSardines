@@ -10,6 +10,7 @@ class Minomino {
   
   PShape getM() {
     mino = createShape();
+    fill(0,252,0);
     mino.beginShape();
     mino.vertex(x,y);
     mino.vertex(x+25, y);

@@ -45,12 +45,31 @@
 //  else 
 //  return false;
 //}
-Tetromino t = new Tetromino(6,0,100,100);
+Tetromino t = new Tetromino(0,1,100,100);
 void setup() {
   size(1500, 900);
   background(0);
 }
 
 void draw() {
+  clear();
   t.display();
+  t.drop();
+}
+
+void mouseClicked() {
+  
+}
+
+void keyPressed() {
+  if ( key == 'a' ) {
+    t.moveLeft();
+  }
+  if (key == 'd' ) {
+    t.moveRight(); 
+  }
+  if (key == 'w' ) {
+    t.rotate(); 
+  }
+
 }
