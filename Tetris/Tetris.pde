@@ -45,31 +45,46 @@
 //  else 
 //  return false;
 //}
-Tetromino t = new Tetromino(2,1,100,100);
+ArrayList<Tetromino> t = new ArrayList<Tetromino>();
+ArrayList<Tetromino> u = new ArrayList<Tetromino>();
+int next;
+
 void setup() {
   size(450, 700);
   background(0);
+  next = 0;
+  for ( int i = 0; i < 10; i ++ ) {
+     t.add(new Tetromino((int)random(7), (int)random(4), 225,0)); 
+  }
+  Grid g = new Grid();
 }
 
 void draw() {
   clear();
-  t.display();
-  t.drop();
+  t.get(next).display();
+  for ( Tetromino tet : u ) {
+     tet.display(); 
+  }
+  if ( t.get(next).stopped() ) {
+    u.add(t.get(next));
+    g.add(t.get(next));
+    next++;
+  }
+  else {
+    t.get(next).drop(); 
+  }
 }
 
-void mouseClicked() {
-  
-}
 
 void keyPressed() {
   if ( key == 'a' ) {
-    t.moveLeft();
+    t.get(next).moveLeft();
   }
   if (key == 'd' ) {
-    t.moveRight(); 
+    t.get(next).moveRight(); 
   }
   if (key == 'w' ) {
-    t.rotate(); 
+    t.get(next).rotate(); 
   }
 
 }
