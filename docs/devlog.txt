@@ -11,22 +11,25 @@ Final Project - Tetris
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+We had to overcome thinking issues first. It was difficult at the beginning to imagine how to incorporate what we wanted to do, since we all knew from the start how to play Tetris. We were able to overcome this issue by having actual face time with each other, so we could bounce ideas off each other in real time, which ended up being incredibly helpful.
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+There were some cooler aspects that we considered doing that we ran out of time for towards the end. Issues that led to the lack of time included busy schedules, as well as the proximity to each other, which was not close. One issue we didn't really resolve was that we began to do code using classes specific to the user, and then a couple classes relating to the accessibility of "tiles" on the board which we thought would make things easier to code. Instead of truly resolving this issue we switched our entire mindset to the code we have now.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+We learned about Processing a lot, probably used the Processing Reference page more than anything else, but it was really helpful and we have much better understandings of Processing as a programming language.
 
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+We totally changed how we were thinking of the project most of the way through the process due to getting stuck many times, we had numerous classes that we realized we didn't need as well as ones that were meant to make things easier but instead made things harder to explain and therefore harder to code in compilance with.
 
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Never ever ever take a night off because even if you worked in the daytime, there will be a lack of connection to the work period 24 hours earlier, making it harder to add on and progress at an optimal rate. Another lesson is that communication is key. We didn't have struggles with that luckily, but due to the work we got done because of how well we communicated, we recognize it as a lesson learned.
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -62,4 +65,11 @@ Team :: Began actual coding discussion & began coding the basics
 Selina :: Worked on display code in driver class Tetris
 Cheryl :: Started making class TetrisPiece
 Henry :: Made empty Player class
+==============================================================
+
+2018-06-07
+--------------------------------------------------------------
+Selina :: Got main player to work
+Cheryl :: Got opening display to work and react, connected code pieces
+Henry :: Created a new setup for in game display, edited devlog to answer questions
 ==============================================================
