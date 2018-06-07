@@ -1,5 +1,5 @@
 void settings() {
-  size(rowSize * cellSize + 2 * sideMarginSize,
+  size(rowSize * cellSize + 2 * sideMarginSize + 4 * nextTilesCellSize + 4 * nextTilesMarginSize,
        columnSize * cellSize + sideMarginSize + topMarginSize);
 }
 
@@ -7,7 +7,8 @@ void setup() {
   setupBoard();
   frameRate(framesPerSec);
   
-  newTile();
+  addToQueue(nextTilesQueueSize + 1);
+  current = new Tile(nextTiles.remove(0));
   drawBoard();
 }
 
@@ -15,24 +16,23 @@ void draw() {
   if (!holdMode && !gameOver &&
       (frameNumber++ % framesPerDrop[level] == 0 ||
        fastMode && frameNumber % framesPerFastDrop == 0) &&
-      !falling.verticalDrop())
+      !current.verticalDrop())
     newTile();
-  background(backgroundColor);
-  drawBoard();
-  drawHeader();
+  
+  drawAll();
 }
 
 void keyPressed() {
   if (keyCode == 'a' || keyCode == LEFT)
-    falling.horizontalShift(-1);
+    current.horizontalShift(-1);
   else if (keyCode == 'd' || keyCode == RIGHT)
-    falling.horizontalShift(1);
+    current.horizontalShift(1);
   else if (keyCode == 's' || keyCode == DOWN)
     fastMode = true;
   else if (keyCode == 'w' || keyCode == UP)
-    falling.rotate();
+    current.rotate();
   else if (keyCode == ' ')
-    while(falling.verticalDrop()) {}
+    while(current.verticalDrop()) {}
   else if (keyCode == 'h')
     holdMode = true;
 }

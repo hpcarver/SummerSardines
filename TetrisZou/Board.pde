@@ -4,45 +4,9 @@ color[][] board = new color[columnSize][rowSize];
                                             board[row][column] == boardColor;}
 
 void newTile() {
-  TileType type = TileType.values()[new Random().nextInt(TileType.values().length)];
-  falling = new Tile(type);
+  addToQueue(1);
+  current = new Tile(nextTiles.remove(0));
   clearRows();
-}
-
-void drawBoard() {
-  for (int c=0; c<rowSize; c++) for (int r=0; r<columnSize; r++)
-    drawCell(r, c, board[r][c]);
-    
-  falling.display();
-  
-  stroke(barColor);
-  strokeWeight(barWeight);
-  line(0 + sideMarginSize, 2 * cellSize + topMarginSize, rowSize * cellSize + sideMarginSize, 2 * cellSize + topMarginSize);
-}
-
-void drawHeader() {
-  String text;
-  
-  if (gameOver) {
-    fill(gameOverColor);
-    text = "Game Over";
-  } else {
-    fill(textColor);
-    text = playerName + ": Level " + level;
-  }
-  textSize(topMarginSize - 4 * textMarginSize);
-  textAlign(CENTER);
-  text(text, textMarginSize, textMarginSize, width - 2 * textMarginSize, topMarginSize - 2 * textMarginSize);
-}
-
-void drawCell(int row, int column, color c) {
-  if (gameOver && c != boardColor)
-    fill(gameOverColor);
-  else
-    fill(c);
-  stroke(gridColor);
-  strokeWeight(gridWeight);
-  rect(column * cellSize + sideMarginSize, row * cellSize + topMarginSize, cellSize, cellSize);
 }
 
 //CLEARING ROWS
