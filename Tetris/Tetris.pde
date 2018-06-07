@@ -45,46 +45,59 @@
 //  else 
 //  return false;
 //}
-ArrayList<Tetromino> t = new ArrayList<Tetromino>();
-ArrayList<Tetromino> u = new ArrayList<Tetromino>();
+//ArrayList<Tetromino> t = new ArrayList<Tetromino>();
+//ArrayList<Tetromino> u = new ArrayList<Tetromino>();
 int next;
 
 void setup() {
-  size(450, 700);
+  size(470, 720);
   background(0);
   next = 0;
   for ( int i = 0; i < 10; i ++ ) {
-     t.add(new Tetromino((int)random(7), (int)random(4), 225,0)); 
+     //t.add(new Tetromino((int)random(7), (int)random(4), 225,0)); 
   }
-  Grid g = new Grid();
+  //Grid g = new Grid();
 }
 
 void draw() {
   clear();
-  t.get(next).display();
-  for ( Tetromino tet : u ) {
-     tet.display(); 
-  }
-  if ( t.get(next).stopped() ) {
-    u.add(t.get(next));
-    g.add(t.get(next));
-    next++;
-  }
-  else {
-    t.get(next).drop(); 
-  }
+  //t.get(next).display();
+  //for ( Tetromino tet : u ) {
+    // tet.display(); 
+  //}
+  //if ( t.get(next).stopped() ) {
+    //u.add(t.get(next));
+    //g.add(t.get(next));
+    //next++;
+  //}
+  //else {
+    //t.get(next).drop(); 
+  //}
+  Game();
 }
 
 
 void keyPressed() {
   if ( key == 'a' ) {
-    t.get(next).moveLeft();
+    //t.get(next).moveLeft();
   }
   if (key == 'd' ) {
-    t.get(next).moveRight(); 
+    //t.get(next).moveRight(); 
   }
   if (key == 'w' ) {
-    t.get(next).rotate(); 
+    //t.get(next).rotate(); 
   }
 
 }
+
+ void Game() {
+   clear();
+   stroke(#FFFFFF);
+   strokeWeight(5);
+   rect(10,10,450,700);
+   fill(#C9D620);
+   rect(185,10,100,50);
+   fill(#020531);
+   textSize(10);
+   text("SCORE: 0",190,40); //0 will be replaced by a getScore method
+ }
