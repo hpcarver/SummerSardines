@@ -96,8 +96,9 @@ void keyPressed() {
    strokeWeight(5);
    rect(10,10,450,700);
    fill(#C9D620);
-   rect(185,10,100,50);
+   rect(10,10,450,50);
    fill(#020531);
    textSize(10);
-   text("SCORE: 0",190,40); //0 will be replaced by a getScore method
+   text("SCORE: 0",300,40); //0 will be replaced by a getScore method
+   text("LEVEL: 1",100,40); //1 will be replaced by a getLevel method
  }
