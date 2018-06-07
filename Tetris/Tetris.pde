@@ -148,9 +148,9 @@ void mouseClicked() {
    clear();
    stroke(#FFFFFF);
    strokeWeight(5);
-   rect(10,10,450,700);
+   rect(10,10,430,680);
    fill(#C9D620);
-   rect(10,10,450,50);
+   rect(10,10,430,50);
    fill(#020531);
    textSize(10);
    text("SCORE: 0",300,40); //0 will be replaced by a getScore method
