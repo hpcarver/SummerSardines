@@ -9,7 +9,7 @@ class Tile {
   
   void display() {
     for (int dr = 0; dr < 4; dr++) for (int dc = 0; dc < 4; dc++)
-      if (type.shape[dr][dc] == 1)
+      if (shape[dr][dc] == 1)
         drawCell(row + dr, column + dc, type.hue);
   }
   
@@ -20,19 +20,19 @@ class Tile {
   
   boolean collides() {
     for (int dr = 0; dr < 4; dr++) for (int dc = 0; dc < 4; dc++)
-      if (type.shape[dr][dc] == 1 && !free(row + dr, column + dc))
+      if (shape[dr][dc] == 1 && !free(row + dr, column + dc))
         return true;
     return false;
   }
   
   void rotate() {
-    shapeNum = (shapeNum + 1) % 4
+    shapeNum = (shapeNum + 1) % 4;
     shape = type.shapes.get(shapeNum);
   }
   
   void land() {
     for (int dr = 0; dr < 4; dr++) for (int dc = 0; dc < 4; dc++)
-      if (type.shape[dr][dc] == 1)
+      if (shape[dr][dc] == 1)
         board[row + dr][column + dc] = type.hue;
   }
   
@@ -47,10 +47,14 @@ class Tile {
     if (collides()) {
       row--;
       land();
+      if (row < 2)
+        gameOver = true;
       return false;
     }
     return true;
   }
+  
+  
 } 
 
 enum TileType {
@@ -95,9 +99,9 @@ enum TileType {
   
   private TileType(color hue, int[][] shape0, int[][] shape1, int[][] shape2, int[][] shape3) {
     this.hue = hue;
-    shapes.add(shape3);
-    shapes.add(shape2);
-    shapes.add(shape1);
     shapes.add(shape0);
+    shapes.add(shape1);
+    shapes.add(shape2);
+    shapes.add(shape3);
   }
 }
