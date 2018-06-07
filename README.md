@@ -2,8 +2,9 @@
 
 # TETRIS
 
-Our project is meant to be a recreation of the classic game Tetris that many know and love. Our setup is a relatively simple version of the game, so without all of those weird powerups and distracting backgrounds you see popping up everywhere.
-Our game works through a driver of several files on Processing. The Tetris driver uses other files to connect how an outside user can interact with the game with how the pieces are used to achieve the goal of keeping the top level down as much as possible (unless your goal is to lose, but we're all winners here). 
+Our project is meant to be a recreation of the classic game Tetris that many know and love. Our setup is a relatively simple version of the game, so without all of those weird powerups and distracting backgrounds you see popping up everywhere. Just sit back and enjoy :)
+# How it Works
+Our game works through a driver of several files on Processing. The Tetris driver uses other files to connect how a user can interact with the game, along with how the pieces are used to achieve the goal of keeping the top level down as much as possible (unless your goal is to lose, but we're all winners here). 
 
 # Launch Instructions
 1. Hit the play button from processing
