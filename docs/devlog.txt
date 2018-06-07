@@ -69,7 +69,7 @@ Henry :: Made empty Player class
 
 2018-06-07
 --------------------------------------------------------------
-Selina :: Got main player to work
+Selina :: Finished functional tetris one player game, added view next pieces functionality
 Cheryl :: Got opening display to work and react, connected code pieces
 Henry :: Created a new setup for in game display, edited devlog to answer questions
 ==============================================================
