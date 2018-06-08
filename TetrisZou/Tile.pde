@@ -9,31 +9,33 @@ class Tile {
   
   void display() {
     for (int dr = 0; dr < 4; dr++) for (int dc = 0; dc < 4; dc++)
-      if (shape[dr][dc] == 1)
-        drawCell(row + dr, column + dc, type.hue);
+      if (shape[dr][dc] == 1)//if 1, there's a cell
+        drawCell(row + dr, column + dc, type.hue);//draws every cell in tile 
   }
   
   Tile(TileType type) {
-    this.type = type;
-    this.shape = type.shapes.get(shapeNum);
+    this.type = type;//set type
+    this.shape = type.shapes.get(shapeNum);//set init rotation
   }
   
-  boolean collides() {
-    for (int dr = 0; dr < 4; dr++) for (int dc = 0; dc < 4; dc++)
-      if (shape[dr][dc] == 1 && !free(row + dr, column + dc))
-        return true;
+  boolean collides() {//checks if two tiles are overlapping
+    for (int dr = 0; dr < 4; dr++) 
+      for (int dc = 0; dc < 4; dc++)
+        if (shape[dr][dc] == 1 && !free(row + dr, column + dc))
+          return true;
     return false;
   }
   
-  void rotate() {
+  void rotate() {//sets tile to next rotation
     shapeNum = (shapeNum + 1) % 4;
     shape = type.shapes.get(shapeNum);
   }
   
-  void land() {
-    for (int dr = 0; dr < 4; dr++) for (int dc = 0; dc < 4; dc++)
-      if (shape[dr][dc] == 1)
-        board[row + dr][column + dc] = type.hue;
+  void land() { //color board w/ cell color once a tile lands
+    for (int dr = 0; dr < 4; dr++) 
+      for (int dc = 0; dc < 4; dc++)
+        if (shape[dr][dc] == 1)
+          board[row + dr][column + dc] = type.hue;
   }
   
   void horizontalShift(int shift) {
@@ -57,7 +59,7 @@ class Tile {
   
 } 
 
-enum TileType {
+enum TileType { //all tile types
   O(yellow, new int[][]
     {{0, 1, 1, 0},
      {0, 1, 1, 0},
