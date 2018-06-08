@@ -15,7 +15,7 @@ We had to overcome thinking issues first. It was difficult at the beginning to i
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-There were some cooler aspects that we considered doing that we ran out of time for towards the end. Issues that led to the lack of time included busy schedules, as well as the proximity to each other, which was not close. One issue we didn't really resolve was that we began to do code using classes specific to the user, and then a couple classes relating to the accessibility of "tiles" on the board which we thought would make things easier to code. Instead of truly resolving this issue we switched our entire mindset to the code we have now.
+There were some cooler aspects that we considered doing that we ran out of time for towards the end. Issues that led to the lack of time included busy schedules, as well as the proximity to each other, which was not close. One issue we didn't really resolve was that we began to do code using classes specific to the user, and then a couple classes relating to the accessibility of "tiles" on the board which we thought would make things easier to code. Instead of truly resolving this issue we switched our entire mindset to the code we have now. We also were unable to resolve the issue of having the board clear after losing, so you still have to hit play again.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -24,7 +24,7 @@ We learned about Processing a lot, probably used the Processing Reference page m
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We totally changed how we were thinking of the project most of the way through the process due to getting stuck many times, we had numerous classes that we realized we didn't need as well as ones that were meant to make things easier but instead made things harder to explain and therefore harder to code in compilance with.
+We totally changed how we were thinking of the project most of the way through the process due to getting stuck many times, we had numerous classes that we realized we didn't need as well as ones that were meant to make things easier but instead made things harder to explain and therefore harder to code in compilance with. Now we have meaningful and important classes, although still a lot in number.
 
 
 LESSONS LEARNED
@@ -70,6 +70,7 @@ Henry :: Made empty Player class
 2018-06-07
 --------------------------------------------------------------
 Selina :: Finished functional tetris one player game, added view next pieces functionality
-Cheryl :: Got opening display to work and react, connected code pieces
-Henry :: Created a new setup for in game display, edited devlog to answer questions
+Cheryl :: Got opening display to work and react, connected code pieces, added deeper commenting
+Henry :: Created a new setup for in game display, edited devlog to answer questions, cleared up junky code
+Team :: Prepped for presentation
 ==============================================================

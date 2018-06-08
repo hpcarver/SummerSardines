@@ -34,7 +34,7 @@ void drawHeader() {//draws text on header
     text = "Game Over";
   } else {
     fill(textColor);
-    text = playerName + ": Level " + level;
+    text = "Level " + level;
   }
   textSize(textSize);
   textAlign(CENTER);

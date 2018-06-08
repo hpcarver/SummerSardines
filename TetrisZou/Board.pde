@@ -25,7 +25,7 @@ void clearRows() {
     if (rowFull(row)) {//clears row if full
       rowsCleared++;
       count++;
-      if (rowsCleared % 10 == 0 && level < 10)//levels up for every 10 rows cleared
+      if (rowsCleared % 5 == 0 && level < 10)//levels up for every 10 rows cleared
         level++;
         
       shiftBoardDown(row--);//shifts board down after row is cleared
