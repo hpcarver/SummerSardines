@@ -7,13 +7,14 @@ void drawAll() {
 
 void drawBoard() {
   //grid and tiles
-  for (int c=0; c<rowSize; c++) for (int r=0; r<columnSize; r++)
-    drawCell(r, c, board[r][c]);
+  for (int c=0; c<rowSize; c++) 
+    for (int r=0; r<columnSize; r++)
+      drawCell(r, c, board[r][c]);
     
   //falling piece
   current.display();
   
-  //failure bar
+  //threshold/failure bar, game over if passed
   stroke(barColor);
   strokeWeight(barWeight);
   line(sideMarginSize, 2 * cellSize + topMarginSize, rowSize * cellSize + sideMarginSize, 2 * cellSize + topMarginSize);
@@ -25,7 +26,7 @@ void drawBoard() {
   rect(sideMarginSize, topMarginSize, rowSize * cellSize, columnSize * cellSize);
 }
 
-void drawHeader() {
+void drawHeader() {//draws text on header
   String text;
   
   if (gameOver) {
@@ -40,7 +41,7 @@ void drawHeader() {
   text(text, textMarginSize, textMarginSize, width - 2 * textMarginSize, topMarginSize - 2 * textMarginSize);
 }
 
-void drawNextTiles() {
+void drawNextTiles() {//draws display of tile queue
   stroke(borderColor);
   strokeWeight(borderWeight);
   noFill();
@@ -54,7 +55,7 @@ void drawNextTiles() {
   }
 }
 
-void drawNextCell(int position, int row, int column, color c) {
+void drawNextCell(int position, int row, int column, color c) {//fills cells in queue tiles
   if (gameOver && c != boardColor)
     fill(gameOverColor);
   else
@@ -68,7 +69,7 @@ void drawNextCell(int position, int row, int column, color c) {
 }
     
 
-void drawCell(int row, int column, color c) {
+void drawCell(int row, int column, color c) {//fills cells on board
   if (gameOver && c != boardColor)
     fill(gameOverColor);
   else

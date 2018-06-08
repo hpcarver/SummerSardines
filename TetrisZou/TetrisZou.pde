@@ -1,25 +1,28 @@
 void settings() {
-  size(rowSize * cellSize + 2 * sideMarginSize + 4 * nextTilesCellSize + 4 * nextTilesMarginSize,
-       columnSize * cellSize + sideMarginSize + topMarginSize);
+  size(rowSize * cellSize + 2 * sideMarginSize + //horizontal cells on board + 2 for margin
+       4 * nextTilesCellSize + 4 * nextTilesMarginSize, //display area for next pieces
+       columnSize * cellSize + sideMarginSize + topMarginSize);//vertical cells + 2 for margin
 }
 
 void setup() {
-  setupBoard();
+  setupBoard();//color board
   frameRate(framesPerSec);
   
-  addToQueue(nextTilesQueueSize + 1);
-  current = new Tile(nextTiles.remove(0));
+  addToQueue(nextTilesQueueSize + 1);//populate queue with random peces
+  current = new Tile(nextTiles.remove(0));//get first piece
   drawBoard();
 }
 
 void draw() {
-  if (!holdMode && !gameOver &&
-      (frameNumber++ % framesPerDrop[level] == 0 ||
+  if (!holdMode && !gameOver &&//if no piece is held and game is still going
+      (frameNumber++ % framesPerDrop[level] == 0 ||//checks if tile is in place
+                                                   //by dividing frames elapsed by
+                                                   //frames it takes to move one cell
        fastMode && frameNumber % framesPerFastDrop == 0) &&
-      !current.verticalDrop())
+      !current.verticalDrop())//checks if tile is dropping
     newTile();
   
-  drawAll();
+  drawAll();//displays everything on board 
 }
 
 void keyPressed() {
